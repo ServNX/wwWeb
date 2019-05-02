@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-flex class="home">
+    <v-carousel hide-delimiters>
+      <CarouselItem
+        src="/img/header.jpg"
+        header="Wiley Wunders"
+        subheader="Hand Crafted Angler & Fishing Products"
+        :header-classes="['white--text', 'ml-5', 'display-4']"
+      >
+        <v-btn color="blue">
+          <v-icon class="mr-2">book</v-icon> Browse Our Catalog
+        </v-btn>
+      </CarouselItem>
+    </v-carousel>
+  </v-flex>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  import CarouselItem from '../components/CarouselItem';
+  export default {
+    name: 'home-page',
+    components: { CarouselItem },
+  };
 </script>
