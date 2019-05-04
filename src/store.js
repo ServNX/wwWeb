@@ -8,7 +8,6 @@ export default new Vuex.Store({
     links: {
       Home: '/',
       Browse: '/browse',
-      Specials: '/specials',
       Community: '/community',
       About: '/about'
     }

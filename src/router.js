@@ -19,11 +19,6 @@ export default new Router({
       component: () => import(/* webpackChunkName: "browse" */ './views/Browse.vue'),
     },
     {
-      path: '/specials',
-      name: 'specials',
-      component: () => import(/* webpackChunkName: "special" */ './views/Specials.vue'),
-    },
-    {
       path: '/community',
       name: 'community',
       component: () => import(/* webpackChunkName: "community" */ './views/Community.vue'),
