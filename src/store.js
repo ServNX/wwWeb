@@ -4,7 +4,15 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    links: {
+      Home: '/',
+      Browse: '/browse',
+      Specials: '/specials',
+      Community: '/community',
+      About: '/about'
+    }
+  },
   mutations: {},
   actions: {},
 });

@@ -8,9 +8,14 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="ml-3">
-        <v-btn flat>Browse</v-btn>
-        <v-btn flat>Specials</v-btn>
-        <v-btn flat>Community</v-btn>
+        <v-btn
+          flat
+          v-for="(to, key) in links"
+          :key="key"
+          @click="$router.push(to)"
+        >
+          {{ key.toUpperCase() }}
+        </v-btn>
       </v-toolbar-items>
 
       <!--<v-btn
@@ -29,6 +34,8 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex';
+
   export default {
     name: 'App',
     data () {
@@ -36,5 +43,10 @@
         //
       };
     },
+    computed: {
+      ...mapState([
+        'links'
+      ]),
+    }
   };
 </script>
